@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FitTracker - Create Workout</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">
+        <img src="assets/images/logo.png" alt="FitTracker logo" />
+        <div>FitTracker</div>
+      </div>
+
+      <nav>
+        <div>Dashboard</div>
+        <div>Workouts</div>
+        <div>Schedule</div>
+        <div>Reports</div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Create New Workout</h1>
+      <p class="lead">Design your custom workout plan</p>
+
+      <div class="card">
+        <div class="top-actions">
+          <button class="btn-back">← Back to Workouts</button>
+        </div>
+
+        <form>
+          <div class="row">
+            <div class="field">
+              <label for="name">Workout Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="e.g., Upper Body Strength"
+              />
+            </div>
+
+            <div class="field">
+              <label for="type">Workout Type</label>
+              <select id="type">
+                <option>Select type</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field -full">
+            <label for="desc">Description (Optional)</label>
+            <textarea
+              id="desc"
+              placeholder="Brief description of your workout..."
+            ></textarea>
+          </div>
+
+          <section class="exercises">
+            <div class="ex-header">
+              <h3>Exercises</h3>
+              <button type="button" class="add-btn">+ Add Exercise</button>
+            </div>
+
+            <article class="ex-card">
+              <div class="ex-head">
+                <strong>Exercise 1</strong>
+                <a class="muted" href="#">+ Add Set</a>
+              </div>
+
+              <div class="row">
+                <div class="field">
+                  <label>Exercise Name</label>
+                  <input type="text" placeholder="e.g., Bench Press" />
+                </div>
+
+                <div class="field">
+                  <label>Muscle Group</label>
+                  <select>
+                    <option>Select muscle group</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="sets">
+                <label class="muted">Sets</label>
+
+                <div class="set-row">
+                  <div class="small">Set 1:</div>
+                  <input class="xs" type="text" placeholder="Reps" />
+                  <span class="muted">reps</span>
+                  <input class="xs" type="text" placeholder="Weight" />
+                  <span class="muted">kg</span>
+                </div>
+
+                <div class="rest">
+                  <label class="muted">Rest Time (seconds)</label>
+                  <input type="text" class="xs" value="60" />
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <div class="divider"></div>
+
+          <div class="actions">
+            <button type="button" class="btn">Save as Draft</button>
+            <button type="submit" class="btn btn-primary">
+              Create Workout
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
